@@ -22,7 +22,6 @@ public class UrlService {
     private final UrlRepository urlRepository;
     private final UrlCacheRepository urlCacheRepository;
     private final HashCache hashCache;
-   ;
     @Value("${url.shortener-service.address}")
     private String serverAddress;
 
