@@ -1,0 +1,51 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: user
+    password: password
+
+  liquibase:
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+server:
+  port: 8091
+
+logging:
+  level:
+    root: info
+
+executor:
+  thread-pool:
+    size: 1
+  queue:
+    capacity: 100
+
+hash-cache:
+  queue:
+    size: 1000
+    threshold: 20
+
+url:
+  shortener-service:
+    address: https://sh.c/
+
+  prefix: api/v1
+
+popular:
+  links:
+    threshold: 100

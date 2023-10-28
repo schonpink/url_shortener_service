@@ -1,2 +1,7 @@
-package url_shortener.exception;public class InvalidUrlException {
+package url_shortener.exception.url;
+
+public class InvalidUrlException extends RuntimeException {
+    public InvalidUrlException(String message) {
+        super(message);
+    }
 }

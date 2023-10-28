@@ -1,2 +1,4 @@
-package url_shortener.dto;public class Error {
+package url_shortener.dto;
+
+public record Error(String code, String message) {
 }
